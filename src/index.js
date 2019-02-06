@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import 'npm-font-open-sans';
 import 'normalize.css';
 import './index.css';
 import App from './App';
