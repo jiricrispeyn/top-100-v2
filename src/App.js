@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+import { H3 } from './components/headings';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <h3>Top 100</h3>
+        <H3>Top 100</H3>
       </div>
     );
   }
