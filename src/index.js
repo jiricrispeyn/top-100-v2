@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import 'npm-font-open-sans';
 import 'normalize.css';
+import '@mdi/font/css/materialdesignicons.css';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
