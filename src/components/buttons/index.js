@@ -1,9 +1,21 @@
 import React from 'react';
-import { StyledMediumButton } from './style';
+import { StyledMediumButton, StyledMediumLink } from './style';
 
-export const MediumButton = ({ icon, children }) => (
-  <StyledMediumButton>
+const Children = ({ children, icon }) => (
+  <>
     {icon && <i className={`mdi mdi-${icon}`} />}
     {children}
+  </>
+);
+
+export const MediumButton = props => (
+  <StyledMediumButton>
+    <Children {...props} />
   </StyledMediumButton>
+);
+
+export const MediumLink = ({ to, ...props }) => (
+  <StyledMediumLink to={to}>
+    <Children {...props} />
+  </StyledMediumLink>
 );
