@@ -38,6 +38,7 @@ const AddList = () => {
           onChange={event => setSearchTerm(event.target.value)}
         />
         <ResultsContainer>
+          {isSearching && 'Searching...'}
           {get(results, 'tracks.items', []).map(item => (
             <IntegrationCard
               key={item.id}
