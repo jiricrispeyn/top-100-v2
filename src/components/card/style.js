@@ -26,7 +26,7 @@ export const StyledIntegrationCard = styled.div`
   border-radius: 5px;
   border: 1px solid #e0e7ff;
 
-  &:not(::nth-of-type(1)) {
+  &:not(:nth-of-type(1)) {
     margin-left: 1.5rem;
   }
 `;
