@@ -1,6 +1,7 @@
 import styled from '@emotion/styled';
 import { Link } from '@reach/router';
 import colors from '../../helpers/colors';
+import { rgba } from 'polished';
 
 export const StyledMediumButton = styled.button`
   appearance: none;
@@ -14,11 +15,23 @@ export const StyledMediumButton = styled.button`
   font-weight: 600;
   line-height: 1.4;
   text-align: center;
+  transition: all 0.15s ease;
   cursor: pointer;
 
   &:focus,
   &:active {
     outline: none;
+  }
+
+  &:hover,
+  &:focus {
+    transform: translateY(-1px);
+    box-shadow: 0 2px 4px ${rgba(colors.blue, 0.2)};
+  }
+
+  &:active {
+    transform: translateY(1px);
+    box-shadow: 0 2px 8px ${rgba(colors.blue, 0.4)};
   }
 
   .mdi {
