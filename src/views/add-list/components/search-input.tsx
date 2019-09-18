@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { FC } from 'react';
 import styled from 'styled-components';
 import colors from '../../../helpers/colors';
 import { Input } from '../../../components/form';
@@ -23,7 +23,7 @@ const Icon = styled.i`
   color: ${colors.black3};
 `;
 
-export const SearchInput = props => (
+export const SearchInput: FC<any> = props => (
   <Container>
     <Icon className="mdi mdi-magnify" />
     <StyledInput {...props} />

@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { Link } from '@reach/router';
 import colors from '../../helpers/colors';
 import { rgba } from 'polished';
 
@@ -15,6 +14,7 @@ export const StyledMediumButton = styled.button`
   font-weight: 600;
   line-height: 1.4;
   text-align: center;
+  text-decoration: none;
   transition: all 0.15s ease;
   cursor: pointer;
 
@@ -39,7 +39,3 @@ export const StyledMediumButton = styled.button`
     font-size: 1rem;
   }
 `;
-
-export const StyledMediumLink = styled(StyledMediumButton)`
-  text-decoration: none;
-`.withComponent(Link);

@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import React, { FC, useState, useEffect } from 'react';
+import { RouteComponentProps } from '@reach/router';
 import { get } from 'lodash';
 import { search } from '../../api/queries';
 import useDebounce from '../../hooks/use-debounce';
@@ -8,7 +9,7 @@ import { MediumButton } from '../../components/buttons';
 import { StyledLink, ResultsContainer } from './style';
 import { SearchInput } from './components/search-input';
 
-const AddList = () => {
+const AddList: FC<RouteComponentProps> = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [results, setResults] = useState({});
   const [isSearching, setIsSearching] = useState(false);
@@ -35,11 +36,11 @@ const AddList = () => {
           type="text"
           placeholder="Search track"
           value={searchTerm}
-          onChange={event => setSearchTerm(event.target.value)}
+          onChange={(event: any) => setSearchTerm(event.target.value)}
         />
         <ResultsContainer>
           {isSearching && 'Searching...'}
-          {get(results, 'tracks.items', []).map(item => (
+          {get(results, 'tracks.items', []).map((item: any) => (
             <IntegrationCard
               key={item.id}
               src={item.album.images[1].url}

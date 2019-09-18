@@ -1,5 +1,6 @@
 import React from 'react';
-import { StyledMediumButton, StyledMediumLink } from './style';
+import { Link } from '@reach/router';
+import { StyledMediumButton } from './style';
 
 const Children = ({ children, icon }) => (
   <>
@@ -15,7 +16,7 @@ export const MediumButton = props => (
 );
 
 export const MediumLink = ({ to, ...props }) => (
-  <StyledMediumLink to={to}>
+  <StyledMediumButton as={Link} to={to}>
     <Children {...props} />
-  </StyledMediumLink>
+  </StyledMediumButton>
 );
