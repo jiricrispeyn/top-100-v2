@@ -1,4 +1,4 @@
-import styled from '@emotion/styled';
+import styled from 'styled-components';
 import { darken } from 'polished';
 import { Link } from '@reach/router';
 

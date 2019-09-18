@@ -1,4 +1,4 @@
-import styled from '@emotion/styled';
+import styled from 'styled-components';
 
 export const H3 = styled.div`
   font-size: 1.75rem;

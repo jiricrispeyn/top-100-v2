@@ -1,4 +1,4 @@
-import styled from '@emotion/styled';
+import styled from 'styled-components';
 import { Link } from '@reach/router';
 import colors from '../../helpers/colors';
 import { rgba } from 'polished';
