@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { FC } from 'react';
 import {
   BaseCard,
   StyledIntegrationCard,
@@ -7,7 +7,19 @@ import {
   IntegrationCardSubtitle,
 } from './style';
 
-const IntegrationCard = ({ title, subtitle, src, alt }) => (
+interface IntegrationCardProps {
+  title: string;
+  subtitle: string;
+  src: string;
+  alt: string;
+}
+
+const IntegrationCard: FC<IntegrationCardProps> = ({
+  title,
+  subtitle,
+  src,
+  alt,
+}) => (
   <StyledIntegrationCard>
     <IntegrationCardAvatar src={src} alt={alt} />
     <div style={{ flex: 1, marginLeft: '.9375rem' }}>
