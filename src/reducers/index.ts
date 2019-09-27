@@ -1,6 +1,10 @@
 import { combineReducers } from 'redux';
 
-const rootReducer = combineReducers({});
+import spotify from './spotify';
+
+const rootReducer = combineReducers({
+  spotify,
+});
 
 export default rootReducer;
 
