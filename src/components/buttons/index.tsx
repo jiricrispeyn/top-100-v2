@@ -5,6 +5,7 @@ import { StyledMediumButton } from './style';
 interface ButtonProps {
   children: Element | string;
   icon?: string;
+  onClick?: () => void;
 }
 
 type LinkProps = ButtonProps & {
@@ -18,8 +19,8 @@ const Children: FC<ButtonProps> = ({ children, icon }) => (
   </>
 );
 
-export const MediumButton: FC<ButtonProps> = props => (
-  <StyledMediumButton>
+export const MediumButton: FC<ButtonProps> = ({ onClick, ...props }) => (
+  <StyledMediumButton onClick={onClick}>
     <Children {...props} />
   </StyledMediumButton>
 );
