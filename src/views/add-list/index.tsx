@@ -12,11 +12,13 @@ interface StateProps {}
 
 interface DispatchProps {
   search(query: string, type: string): void;
+  add(list: any[]): void;
 }
 
 const mapStateToProps = (state: AppState): StateProps => ({});
 const mapDispatchToProps = (dispatch: Dispatch): DispatchProps => ({
   search: bindActionCreators(actions.spotify.uiActions.search, dispatch),
+  add: bindActionCreators(actions.top100.uiActions.add, dispatch),
 });
 
 const withRedux = connect<StateProps, DispatchProps, {}, AppState>(

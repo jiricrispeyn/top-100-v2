@@ -8,7 +8,7 @@ import { StyledLink, ResultsContainer } from './style';
 import { SearchInput } from './components/search-input';
 import { AddListProps } from '.';
 
-const AddList: FC<AddListProps> = ({ search }) => {
+const AddList: FC<AddListProps> = ({ search, add }) => {
   const [searchTerm, setSearchTerm] = useState('');
   const debouncedSearchTerm = useDebounce(searchTerm, 500);
 
@@ -40,7 +40,7 @@ const AddList: FC<AddListProps> = ({ search }) => {
           ))}
         </ResultsContainer> */}
         <div style={{ marginTop: '1.875rem' }}>
-          <MediumButton>Add top 10</MediumButton>
+          <MediumButton onClick={() => add([])}>Add top 10</MediumButton>
           <StyledLink to="/">Cancel</StyledLink>
         </div>
       </BaseCard>
